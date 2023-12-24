@@ -1,0 +1,9 @@
+{
+  "properties": [
+
+    {
+      "name": "com.harmonengineering.driver_demo.driver-root",
+      "type": "java.lang.String",
+      "description": "Description for com.harmonengineering.driver_demo.driver-root."
+    }
+  ] }
