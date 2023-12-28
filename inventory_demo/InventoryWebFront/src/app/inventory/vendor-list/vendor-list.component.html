@@ -1,0 +1,26 @@
+<h4>Vendor List</h4>
+<a routerLink="/vendor-create"><button class="btn btn-success"><i class="fa-regular fa-star"></i>Add Vendor</button></a>
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th><i class="fa fa-id-card"></i>Id</th>
+    <th><i class="fa fa-user"></i>Name</th>
+    <th><i class="fa fa-envelope"></i>Address</th>
+    <th><i class="fa fa-Phone"></i>Phone</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let v of vendors">
+    <td>{{v.id}}</td>
+    <td>{{v.vendorName}}</td>
+    <td>{{v.vendorAddress}}</td>
+    <td>{{v.vendorPhone}}</td>
+    <!--    <td> <a routerLink="/details/{{u.id}}"><button class="btn btn-primary"><i class="fa-solid fa-eye"></i>View</button></a> </td>-->
+    <!--    <td> <a routerLink="/user-accounts/{{u.id}}"><button class="btn btn-primary"><i class="fa-solid fa-eye"></i>Accounts</button></a> </td>-->
+    <!--    <td> <button (click)="UserAccountList(u.id)"  class="btn btn-primary"><i class="fa-solid fa-eye"></i>Accounts</button> </td>-->
+    <td><a routerLink="/vendor-edit/{{v.id}}">
+      <button class="btn btn-warning"> <i class="fa-solid fa-pen"></i>Edit</button></a></td>
+    <td><button type="button"(click)='deleteVendorById(v.id)' class="btn btn-danger"><i class="fa-solid fa-trash"></i>Delete</button></td>
+  </tr>
+  </tbody>
+</table>

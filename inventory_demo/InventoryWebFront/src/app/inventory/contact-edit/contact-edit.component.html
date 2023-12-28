@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <h6 class="text-primary">Update Contact Details : {{contact.id}}</h6>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div [formGroup]="editForm">
+        <label>Name:</label>
+        <input type="text" formControlName="contactName" class="form-control"
+               [(ngModel)]="contact.contactName"
+               [ngClass]="{'is-invalid':submitted && form['contactName'].errors}">
+        <div *ngIf="submitted && form['contactName'].errors" class="invalid-feedback">
+                    Contact name can't be empty
+        </div>
+      </div>
+      <div [formGroup]="editForm">
+        <label>Email:</label>
+        <input type="text" formControlName="contactEmail" class="form-control"
+               [(ngModel)]="contact.contactEmail"
+               [ngClass]="{'is-invalid':submitted && form['contactEmail'].errors}">
+        <div *ngIf="submitted && form['contactEmail'].errors" class="invalid-feedback">
+                    Contact email can't be empty
+        </div>
+      </div>
+      <div [formGroup]="editForm">
+        <label>Phone:</label>
+        <input type="text" formControlName="contactPhone" class="form-control"
+               [(ngModel)]="contact.contactPhone"
+               [ngClass]="{'is-invalid':submitted && form['contactPhone'].errors}">
+        <div *ngIf="submitted && form['contactPhone'].errors" class="invalid-feedback">
+                    Contact phone can't be empty
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-primary">Update Contact</button>
+    </form>
+  </div>
+</div>
+<br>
+

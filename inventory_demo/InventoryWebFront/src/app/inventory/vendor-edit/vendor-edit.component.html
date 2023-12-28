@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <h6 class="text-primary">Update Vendor Details : {{vendor.id}}</h6>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div [formGroup]="editForm">
+        <label>Name:</label>
+        <input type="text" formControlName="vendorName" class="form-control"
+               [(ngModel)]="vendor.vendorName"
+               [ngClass]="{'is-invalid':submitted && form['vendorName'].errors}">
+        <div *ngIf="submitted && form['vendorName'].errors" class="invalid-feedback">
+          Vendor name can't be empty
+        </div>
+      </div>
+      <div [formGroup]="editForm">
+        <label>Address:</label>
+        <input type="text" formControlName="vendorAddress" class="form-control"
+               [(ngModel)]="vendor.vendorAddress"
+               [ngClass]="{'is-invalid':submitted && form['vendorAddress'].errors}">
+        <div *ngIf="submitted && form['vendorAddress'].errors" class="invalid-feedback">
+          Vendor address can't be empty
+        </div>
+      </div>
+      <div [formGroup]="editForm">
+        <label>Phone:</label>
+        <input type="text" formControlName="vendorPhone" class="form-control"
+               [(ngModel)]="vendor.vendorPhone"
+               [ngClass]="{'is-invalid':submitted && form['vendorPhone'].errors}">
+        <div *ngIf="submitted && form['vendorPhone'].errors" class="invalid-feedback">
+          Vendor phone can't be empty
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-primary">Update Vendor</button>
+    </form>
+  </div>
+</div>
+<br>

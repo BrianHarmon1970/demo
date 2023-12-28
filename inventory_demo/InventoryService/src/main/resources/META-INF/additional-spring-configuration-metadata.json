@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "com.harmonengineering.inventoryservice.contact-root",
+      "type": "java.lang.String",
+      "description": "Description for com.harmonengineering.inventoryservice.contact-root."
+    },
+    {
+      "name": "com.harmonengineering.inventoryservice.customer-root",
+      "type": "java.lang.String",
+      "description": "Description for com.harmonengineering.inventoryservice.customer-root."
+    },
+    {
+      "name": "com.harmonengineering.inventoryservice.vendor-root",
+      "type": "java.lang.String",
+      "description": "Description for com.harmonengineering.inventoryservice.vendor-root."
+    }
+  ] }
