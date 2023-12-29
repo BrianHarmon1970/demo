@@ -1,0 +1,35 @@
+This directory contains the implementation of the Service and WebFront components for the inventory/invoice demo program
+
+ A. Java server implementation -
+	InventoryService-0.0.1-SNAPSHOT.war - an executable java jar file packaged as a .war (web archive)
+	  This is necessary for the embedded tomcat web server within the jar file that provides the web services
+	  for this Java implementation. It simply needs to be run on the intended server machine as a Java jar file
+	  as follows:
+
+		java -jar ./InventoryService-0.0.1-SNAPSHOT.war
+
+		(assuming the file is in the current working directory)
+		the default configuration serves the REST APIs on port 8080 of the serving host
+
+		the api roots for the data currently implemented are
+
+		contacts - /api/inventory/contact
+		customers - /api/inventory/customer
+		vendors - /api/inventory/vendors
+
+		data is served and received in JSON format
+
+		presently the service allows cross-origin request from the Angular CLI development server at
+		port 4200 on the serving machine ( or localhost as is typical for development ) allowing the 
+		Angular client to be run on the same maching as the serving service.
+
+		the service is configured to open MySQL database on the localhost at default port 3306 and 
+		it is assumed that there is root user there with password 'root' (i.e. root@localhost:3306 )
+
+B. Angular2 / Typescript client implementation allowing client access to the data services in web page running in standard browser.
+	these files will need to be served from a static web page service and will execute as JavaScript in the users browser.
+
+	presently copied into the deploy directory - ( this one ) in subdirectory ./dist/inventory-web-front
+		
+
+
